@@ -58,9 +58,23 @@ SVC:
       preview_args:
         nrows: 10
 
+NB:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/NB.pickle
+  versioned: true
+  metadata:
+    kedro-viz:
+      layer: models
+      preview_args:
+        nrows: 10
+
 svm_metrics:
   type: tracking.JSONDataSet
   filepath: data/09_tracking/metrics/svm_metrics.json
+
+nb_metrics:
+  type: tracking.JSONDataSet
+  filepath: data/09_tracking/metrics/nb_metrics.json
 
 companies:
   type: pandas.CSVDataSet
