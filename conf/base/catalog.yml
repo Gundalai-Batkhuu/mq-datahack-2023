@@ -39,6 +39,16 @@
 # (transcoding), templating and a way to reuse arguments that are frequently repeated. See more here:
 # https://kedro.readthedocs.io/en/stable/data/data_catalog.html
 
+raw_data:
+    type: pandas.ExcelDataSet
+    filepath: data/01_raw/3- Ordered Data for Hackaton.xlsx
+    metadata:
+        kedro-viz:
+        layer: raw
+        preview_args:
+            nrows: 10
+
+
 iris_raw:
   type: pandas.CSVDataSet
   filepath: data/01_raw/iris_dataset.csv
